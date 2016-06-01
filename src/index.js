@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';  // search_bar.js  (.js doesn't have to be written)
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 const API_KEY = "";
 
-;
+
 
 // Create a new component.  This component shoud produce
 // some HTML
@@ -25,7 +26,8 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <VideoList videos= {this.state.videos}/>  {/*Comment: pass the prop videos to VideoList*/}
+        <VideoDetail video={this.state.videos[0]} />
+        <VideoList videos= {this.state.videos} />  {/*Comment: pass the prop videos to VideoList*/}
       </div>
     );
   }
