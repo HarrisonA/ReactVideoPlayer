@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <VideoList videos= {this.state.videos}/>  //pass the prop videos to VideoList
+        <VideoList videos= {this.state.videos}/>  {/*Comment: pass the prop videos to VideoList*/}
       </div>
     );
   }
